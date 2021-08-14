@@ -7,7 +7,7 @@
   
   vc.isHorizontal = YES;
   
-  [self presentViewController:vc animated:YES completion:nil];NG)
+  [self presentViewController:vc animated:YES completion:nil];
 
 ![IMG_3720](https://user-images.githubusercontent.com/9973605/129439837-00add157-67bb-444f-8c8c-11664c48d4f5.PNG)
 

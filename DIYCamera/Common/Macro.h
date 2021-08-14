@@ -93,26 +93,6 @@
 
 #define  WeakSelf()                 __weak typeof(self) weakSelf = self
 
-#pragma mark 日志输出控制
-#if DEBUG
-//#define IS_NOT_LOG   TRUE                      /*======================不打印日志 */
-#define IS_NOT_LOG   FALSE                       /*======================打印日志 */
-#else
-#define IS_NOT_LOG   TRUE                      /*======================不打印日志 */
-#endif
-
-#if IS_NOT_LOG
-
-#define LogOut(format, ...)
-#define LogInfo(...)
-
-#else
-
-#define LogOut(format, ...) printf("class: <%p %s:(%d) > method: %s \n%s\n", self, [[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String], __LINE__, __PRETTY_FUNCTION__, [[NSString stringWithFormat:(format), ##__VA_ARGS__] UTF8String] )
-#define LogInfo(...)  LogOut(__VA_ARGS__)
-
-#endif
-
 
 //单例 宏定义
 // @interface
@@ -257,215 +237,18 @@ shouldPrevent = NO; \
 }); \
 
 
-
-#define Compress_MaxSize      500*1024
-
 //rgb颜色转换（16进制->10进制）
 #define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
 #define THEME_COLOR            kRGBColor(92, 130, 240)
-#define APP_BGCOLOR             kRGBColor(239, 239, 244)
-#define CONTROL_BG_COLOR          kRGBColor(251, 251, 255)
 
-//橙色按钮
-#define BTN_ORANGE_FORBID        [UIColor colorWithRed:0.949 green:0.714 blue:0.553 alpha:1.00]
-#define BTN_ORANGE_NORMAL        [UIColor colorWithRed:0.980 green:0.420 blue:0.047 alpha:1.00]
-#define BTN_ORANGE_SELECTED      [UIColor colorWithRed:0.851 green:0.341 blue:0.004 alpha:1.00]
-
-#define BTN_ORANGE_TITLE_FORBID       [UIColor colorWithRed:0.941 green:0.894 blue:0.863 alpha:1.00]
-
-//蓝色按钮
-#define BTN_BLUE_FORBID           [UIColor colorWithRed:0.792 green:0.800 blue:0.843 alpha:1.00]
-#define BTN_BLUE_NORMAL         [UIColor colorWithRed:0.310 green:0.400 blue:0.898 alpha:1.00]
-#define BTN_BLUE_SELECTED      [UIColor colorWithRed:0.208 green:0.298 blue:0.784 alpha:1.00]
-
-
-#define FirstPageSelected             kRGBColor(92,130,240)
-#define FirstPageNoSelected             kRGBColor(51,51,51)
-
-#define LIGHT_BLUE                 kRGBColor(172,185,254)
-#define LINE_GRAY                    [UIColor colorWithRed:180 green:180 blue:180 alpha:1.00]
-#define LINE_GRAY2                  kRGBColor(229,229,229)
-#define APP_LINE_COLOR                  kRGBColor(210,210,210)
-#define LINE_GRAY3                   [UIColor colorWithRed:198./255. green:198./255. blue:204./255. alpha:1.0]
-
-#define TEXT_BLACK                kRGBColor(27,27,27)
-#define TEXT_GRAY                   kRGBColor(153,153,153)
-#define TEXT_ORANGE             [UIColor colorWithRed:0.980 green:0.420 blue:0.047 alpha:1.00]
-#define TEXT_CHECK_GRAY                   kRGBColor(187,187,187)
-#define TEXT_GREEN                 [UIColor colorWithRed:0.000 green:0.620 blue:0.588 alpha:1.00]
-#define TEXT_PURPLE                [UIColor colorWithRed:0.361 green:0.510 blue:0.941 alpha:1.00]
-
-
-#define TEXT_PHOTO_TITLE_PURPLE                 [UIColor colorWithRed:0.369 green:0.369 blue:0.557 alpha:1.00]
-
-#define ToolTipColorBlue                      [UIColor colorWithRed:0.122 green:0.157 blue:0.349 alpha:1.00]
-
-#define LABEL_BG_ORANGE    [UIColor colorWithRed:0.980 green:0.420 blue:0.047 alpha:1.00]
-#define LABEL_BG_GRAY                      [UIColor colorWithRed:0.937 green:0.937 blue:0.957 alpha:1.00]
-
-#define LABEL_GRAY_102                kRGBColor(102,102,102)
-
-#define CHECK_TXT_BLACK                kRGBColor(94,94,142)
-#define CHECK_TXT_BLUE                 kRGBColor(92, 130, 240)
 #define CHECK_TXT_PURPLE              kRGBColor(79, 102, 230)
-#define VIN_HEAD_COLOR     [UIColor colorWithRed:0.937 green:0.937 blue:0.957 alpha:1.00]
-
-#define btn_forbid_selected     kRGBColor(175, 187, 253)
-#define Point_RED                            [UIColor colorWithRed:0.898 green:0.243 blue:0.263 alpha:1.00]
-
-#define Btn_Normal_Orange                            [UIColor colorWithRed:0.980 green:0.420 blue:0.047 alpha:1.00]
-#define Btn_Selected_Orange                           [UIColor colorWithRed:0.851 green:0.341 blue:0.004 alpha:1.00]
-#define Btn_Forbid_Orange                              [UIColor colorWithRed:0.949 green:0.714 blue:0.553 alpha:1.00]
-
-#define Btn_Normal_Dark_Blue                       [UIColor colorWithRed:0.310 green:0.400 blue:0.902 alpha:1.00]
-#define Btn_Selected_Dark_Blue                      [UIColor colorWithRed:0.208 green:0.298 blue:0.784 alpha:1.00]
-#define Btn_Forbid_Dark_Blue                         [UIColor colorWithRed:0.792 green:0.800 blue:0.843 alpha:1.00]
-
-#define MAIN_YELLOW                                 [UIColor colorWithRed:253./255. green:235./255. blue:52./255. alpha:1.0]
 
 #pragma mark 颜色设置
 
-#define COLOR_0076FF                                   kRGBColor(0, 118, 255)
-#define COLOR_009E96                                   [UIColor colorWithRed:0.000 green:0.620 blue:0.588 alpha:1.00]
-
-#define COLOR_1B1B1B                                   kRGBColor(27, 27, 27)
-
-#define COLOR_2E2E2E                                      UIColorFromRGB(0X2E2E2E)
-
-
-#define COLOR_333333                                   kRGBColor(51, 51, 51)
-#define COLOR_373737                                   kRGBColor(55, 55, 55)
-
-#define COLOR_354CC8                                      [UIColor colorWithRed:0.208 green:0.298 blue:0.784 alpha:1.00]
-
-#define COLOR_4A90E2                                        kRGBColor(74, 144, 226)
-#define COLOR_486EDF                                       [UIColor colorWithRed:0.282 green:0.431 blue:0.875 alpha:1.00]
-
-#define COLOR_5E5E8E                                  kRGBColor(94, 94, 142)
-#define COLOR_5F5D92                                  kRGBColor(95, 93, 146)
-#define COLOR_5C82F0                                   kRGBColor(92,130,240)
-
-
-#define COLOR_68CEA7                                    [UIColor colorWithRed:0.408 green:0.808 blue:0.655 alpha:1.00]
-
-#define COLOR_95A3F0                                    [UIColor colorWithRed:0.584 green:0.639 blue:0.941 alpha:1.00]
-
-#define COLOR_DAE0FF                                    [UIColor colorWithRed:0.855 green:0.878 blue:1.000 alpha:1.00]
-
-#define COLOR_BFBFBF                                       kRGBColor(191, 191, 191)
 
 
 
-#define COLOR_6B82FF                                  kRGBColor(107, 130, 255)
-#define COLOR_666870                                   kRGBColor(102, 104, 112)
-#define COLOR_666666                                   kRGBColor(102, 102, 102)
-
-#define COLOR_78A2D2                                   kRGBColor(120, 162, 210)
-
-#define COLOR_8DB2FF                                   [UIColor colorWithRed:0.553 green:0.698 blue:1.000 alpha:1.00]
-#define COLOR_87A0E8                                   kRGBColor(135, 160, 232)
-
-
-#define COLOR_999999                                   kRGBColor(153, 153, 153)
-
-#define COLOR_B58D60                                       kRGBColor(181, 141, 96)
-
-
-#define COLOR_C5CEFA                                        [UIColor colorWithRed:0.773 green:0.808 blue:0.980 alpha:1.00]
-#define COLOR_CACCD7                                   kRGBColor(202, 204, 215)
-#define COLOR_C0D3F5                                             [UIColor colorWithRed:0.753 green:0.827 blue:0.961 alpha:1.00]
-
-#define COLOR_D9E1FA                                        [UIColor colorWithRed:0.851 green:0.882 blue:0.980 alpha:1.00]
-
-#define COLOR_E5E5E5                                  kRGBColor(229, 229, 229)
-
-#define COLOR_E51C21                                kRGBColor(229, 28, 33)
-
-#define COLOR_EFEFF4                                  kRGBColor(239, 239, 244)
-
-#define COLOR_FBFBFF                                   kRGBColor(251, 251, 255)
-
-#define COLOR_FA6B0C                                   [UIColor colorWithRed:0.980 green:0.420 blue:0.047 alpha:1.00]
-#define COLOR_FAF2F1                                    [UIColor colorWithRed:0.980 green:0.949 blue:0.945 alpha:1.00]
-
-#define COLOR_FFFFFF                                   kRGBColor(255, 255, 255)
-#define COLOR_FF8F00                                   kRGBColor(255, 143, 0)
-#define COLOR_FE0619                                    [UIColor colorWithRed:0.996 green:0.024 blue:0.098 alpha:1.00]
-
-#define COLOR_F0FAF7                                    [UIColor colorWithRed:0.941 green:0.980 blue:0.969 alpha:1.00]
-
-#define COLOR_FDF4E8                                 kRGBColor(253, 244, 232)
-
-#define COLOR_F5F5F5                                   kRGBColor(245, 245, 245)
-#define COLOR_F3F3F3                                    [UIColor colorWithRed:0.953 green:0.953 blue:0.953 alpha:1.00]
-#define COLOR_F7F6FC                                   kRGBColor(247, 246, 252)
-
-#define COLOR_F7F7F9                                  kRGBColor(247, 247, 249)
-
-#define COLOR_F8162E                                  kRGBColor(248, 22, 46)
-#define COLOR_F83330                                    [UIColor colorWithRed:0.973 green:0.200 blue:0.188 alpha:1.00]
-
-#define COLOR_F84745                                    [UIColor colorWithRed:0.973 green:0.278 blue:0.271 alpha:1.00]
-
-#define COLOR_F2F2F2                                   kRGBColor(242, 242, 242)
-
-#define COLOR_F2B68D                                   kRGBColor(242, 182, 141)
-
-#define COLOR_AFAFC7                                   kRGBColor(175, 175, 199)
-
-#define COLOR_BCBCBC                                   [UIColor colorWithRed:0.737 green:0.737 blue:0.737 alpha:1.00]
-
-#define COLOR_FF0009                                   kRGBColor(255, 0, 9)
-
-#define COLOR_F9ECEC                                    [UIColor colorWithRed:0.976 green:0.925 blue:0.925 alpha:1.00]
-
-#define COLOR_F93330                                        [UIColor colorWithRed:0.976 green:0.200 blue:0.188 alpha:1.00]
-
-#define COLOR_4F66E6                                   [UIColor colorWithRed:0.310 green:0.400 blue:0.902 alpha:1.00]
-
-#define COLOR_3E90FF                                    [UIColor colorWithRed:0.243 green:0.565 blue:1.000 alpha:1.00]
-
-
-
-
-
-
-
-#define COLOR_496FE0                                   [UIColor colorWithRed:0.286 green:0.435 blue:0.878 alpha:1.00]
-
-#define COLOR_54C89B                                    [UIColor colorWithRed:0.329 green:0.784 blue:0.608 alpha:1.00]
-
-
-#define COLOR_F2F2F2                                   kRGBColor(242, 242, 242)
-#define COLOR_F2F2F2                                   kRGBColor(242, 242, 242)
-#define COLOR_F2F2F2                                   kRGBColor(242, 242, 242)
-#define COLOR_F2F2F2                                   kRGBColor(242, 242, 242)
-#define COLOR_F2F2F2                                   kRGBColor(242, 242, 242)
-#define COLOR_F2F2F2                                   kRGBColor(242, 242, 242)
-#define COLOR_F2F2F2                                   kRGBColor(242, 242, 242)
-
-#define COLOR_5C5C5C                                   kRGBColor(92, 92, 92)
-#define COLOR_F86B0D                                   kRGBColor(248, 107, 13)
-#define COLOR_FEF2E9                                   kRGBColor(254, 242, 233)
-#define COLOR_1B4DD7                                   kRGBColor(27, 77, 215)
-
-#define COLOR_B4C7E7 kRGBColor(180, 199, 231)
-#define COLOR_F9BE00 kRGBColor(249, 190, 0)
-#define COLOR_FAAF7B kRGBColor(250, 175, 123)
-#define COLOR_FD5E4E kRGBColor(253, 94, 78)
-
-#define COLOR_952C1D kRGBColor(149, 44, 29)
-
-#define COLOR_191E33 kRGBColor(25, 30, 51)
-
-#define COLOR_000000 UIColorFromRGB(0X000000)
-
-#define COLOR_F5DA2A UIColorFromRGB(0XF5DA2A)
-
-#define COLOR_979797 UIColorFromRGB(0X979797)
-#define COLOR_A2A2A2 UIColorFromRGB(0XA2A2A2)
-#define COLOR_F93330 UIColorFromRGB(0XF93330)
 
 
 #import "UIView+Ex.h"

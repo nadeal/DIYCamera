@@ -390,10 +390,8 @@
             }
             [device setSubjectAreaChangeMonitoringEnabled:monitorSubjectAreaChange];
             [device unlockForConfiguration];
-        }
-        else
-        {
-            LogOut(@"%@", error);
+        } else {
+            
         }
     });
 }
@@ -597,7 +595,7 @@
     if ([_captureSession isRunning]) {
         [_captureSession stopRunning];
     }
-    LogOut(@"照相机管理人释放了");
+    
     _captureSession = nil;
     [self setFocusObserver:NO];
     [_previewLayer removeFromSuperlayer];

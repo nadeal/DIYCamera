@@ -3,7 +3,7 @@
 //  DIYCamera
 //
 //  Created by A Pang on 2020/7/14.
-//  Copyright © 2020 Moses Pang. All rights reserved.
+//  Copyright © 2020 Billy. All rights reserved.
 //
 
 #import "WaterMarkView.h"

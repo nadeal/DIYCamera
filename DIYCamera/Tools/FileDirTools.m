@@ -3,7 +3,7 @@
 //  DIYCamera
 //
 //  Created by Billy Pang on 2018/12/29.
-//  Copyright © 2018年 Moses Pang. All rights reserved.
+//  Copyright © 2018年 Billy. All rights reserved.
 //
 
 #import "FileDirTools.h"

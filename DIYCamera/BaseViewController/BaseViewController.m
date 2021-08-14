@@ -63,7 +63,7 @@
     
     
     navigationBottomLine = [[UILabel alloc] initWithFrame:CGRectMake(0, navigationBarView.height - SINGLE_LINE_WIDTH, SCREEN_W, SINGLE_LINE_WIDTH)];
-    navigationBottomLine.backgroundColor = LINE_GRAY2;
+    navigationBottomLine.backgroundColor = [UIColor grayColor];
     [navigationBarView addSubview:navigationBottomLine];
     
     centerTitleLabel = [[UILabel alloc] initWithFrame:CGRectMake(80*W_UNIT, kStatusBarHeight - (isPad? 20 : 0), SCREEN_W - 160*W_UNIT, 44*H_UNIT)];

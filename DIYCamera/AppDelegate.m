@@ -26,12 +26,11 @@
 -(void) onCreatePhotoDirMethod:(NSString*) uid {
     NSString *documentStr = [FileDirTools documentsDir];
     self.photoPath = [NSString stringWithFormat:@"%@/%@%@", documentStr, uid, APP_PHOTOS_DIR];
-    LogOut(@"photo Path %@", self.photoPath);
     BOOL isSuccess = [FileDirTools createDirectoryAtPath:self.photoPath];
     if (isSuccess) {
-        LogOut(@"文件夹创建成功");
+        
     } else {
-        LogOut(@"文件夹创建失败");
+        
     }
     
 }

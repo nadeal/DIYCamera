@@ -3,7 +3,7 @@
 //  DIYCamera
 //
 //  Created by Billy Pang on 2018/8/1.
-//  Copyright © 2018年 Moses Pang. All rights reserved.
+//  Copyright © 2018年 Billy. All rights reserved.
 //
 
 #import "DIYCameraViewController.h"
@@ -135,15 +135,14 @@
 
 #pragma mark 释放资源
 - (void)dealloc {
-    LogOut(@"照相机释放了");
     [_motionManager stopDeviceMotionUpdates];
     _motionManager = nil;
     
     [self.camera stopCapture];
     [_remindView removeFromSuperview];
-    _remindView = nil;
-    [_remindImgView removeFromSuperview];
-    _remindImgView = nil;
+//    _remindView = nil;
+//    [_remindImgView removeFromSuperview];
+//    _remindImgView = nil;
     
     [_retakeBtn removeObserver:self forKeyPath:@"hidden"];
 }
@@ -172,54 +171,11 @@
 }
 
 -(void) onHideTipMethod {
-    [_remindImgView stopAnimating];
-    _remindView.hidden = YES;
+//    [_remindImgView stopAnimating];
+//    _remindView.hidden = YES;
     
     [self.motionManager stopDeviceMotionUpdates];
 }
-
-#pragma mark 提示图片
--(void) onShowPic {
-    if (TARGET_IPHONE_SIMULATOR) {
-        return;
-    }
-    _remindView = [[UIView alloc] initWithFrame:CGRectMake((SCREEN_W - 92*WIDTH_UNIT)/2, (SCREEN_H - 92*WIDTH_UNIT)/2, 92*WIDTH_UNIT, 92*WIDTH_UNIT)];
-    _remindView.backgroundColor = BTN_BLUE_NORMAL;
-    _remindView.layer.cornerRadius = 5;
-    [self.view addSubview:_remindView];
-    
-    _remindView.transform = CGAffineTransformMakeRotation(-M_PI/2);
-    
-    _remindImgView = [[UIImageView alloc] initWithFrame:CGRectMake((_remindView.width - 60*WIDTH_UNIT)/2, 10*HEIGHT_UNIT, 60*WIDTH_UNIT, 60*WIDTH_UNIT)];
-    _remindImgView.contentMode = UIViewContentModeScaleAspectFit;
-    _remindImgView.backgroundColor = [UIColor clearColor];
-    
-    [_remindView addSubview:_remindImgView];
-    //创建一个数组，数组中按顺序添加要播放的图片（图片为静态的图片）
-    NSMutableArray *imgArray = [NSMutableArray array];
-    for (int i=1; i<6; i++) {
-        UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"横屏-图%d.png",i]];
-        [imgArray addObject:image];
-    }
-    //把存有UIImage的数组赋给动画图片数组
-    _remindImgView.animationImages = imgArray;
-    //设置执行一次完整动画的时长
-    _remindImgView.animationDuration = 1.0;
-    //动画重复次数 （0为重复播放）
-    _remindImgView.animationRepeatCount = 0;
-    //开始播放动画
-    [_remindImgView startAnimating];
-    //停止播放动画  - (void)stopAnimating;
-
-    _remindLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, _remindView.width-20*WIDTH_UNIT, _remindView.width, 15*WIDTH_UNIT)];
-    _remindLabel.backgroundColor = [UIColor clearColor];
-    _remindLabel.text = @"请横屏拍摄";
-    _remindLabel.textColor = [UIColor whiteColor];
-    _remindLabel.textAlignment = NSTextAlignmentCenter;
-    _remindLabel.font = [UIFont systemFontOfSize:15];
-    [_remindView addSubview:_remindLabel];
-}
-
 
 - (UIImageView *)pickView {
     if (_pickView == nil) {
@@ -783,17 +739,7 @@
     return btn;
 }
 
-#pragma -mark DJCameraDelegate
-- (void)cameraDidFinishFocus
-{
-//    LogOut(@"对焦结束了");
-}
-- (void)cameraDidStareFocus
-{
-//    LogOut(@"开始对焦");
-}
-
--(void)starMotionManager{
+-(void)starMotionManager {
     
     if (_motionManager == nil) {
         _motionManager = [CMMotionManager new];
@@ -804,8 +750,6 @@
             [self handleDeviceMotion:motion];
         }];
     }
-    
-//    [self.manager.session startRunning];
 }
 
 #pragma mark 横竖屏
@@ -819,13 +763,11 @@
         
         if (y>=0) {
             
-//             UIDeviceOrientationPortraitUpsideDown
-//            LogOut(@"头向下");
         } else {
             //竖屏
             // UIDeviceOrientationPortrait
-            _remindView.hidden = NO;
-            [_remindImgView startAnimating];
+//            _remindView.hidden = NO;
+//            [_remindImgView startAnimating];
             
 //            [self deviceOrientationDidChange];
             
@@ -834,12 +776,12 @@
     } else {
         
         if (x >= 0) {
-//            LogOut(@"头向右");
+//            //LogOut(@"头向右");
         } else {
-//            LogOut(@"头向左");
+//            //LogOut(@"头向左");
             // 停止重力引擎
-            [_remindImgView stopAnimating];
-            _remindView.hidden = YES;
+//            [_remindImgView stopAnimating];
+//            _remindView.hidden = YES;
             
             [self.motionManager stopDeviceMotionUpdates];
             

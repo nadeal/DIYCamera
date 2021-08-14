@@ -1,0 +1,20 @@
+PODS:
+  - MBProgressHUD (0.9.2)
+  - MJExtension (3.2.4)
+
+DEPENDENCIES:
+  - MBProgressHUD (~> 0.9.2)
+  - MJExtension
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - MBProgressHUD
+    - MJExtension
+
+SPEC CHECKSUMS:
+  MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
+  MJExtension: 88e0900751b6cac8de1cf724ca9838a0b28d5acb
+
+PODFILE CHECKSUM: 6d74958fb07dd3aa8d089141f81348cb33fcabe0
+
+COCOAPODS: 1.10.1

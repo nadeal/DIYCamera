@@ -16,6 +16,17 @@
 		07B9B76326C772A0005B9647 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 07B9B76226C772A0005B9647 /* main.m */; };
 		07B9B76D26C772A0005B9647 /* DIYCameraTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 07B9B76C26C772A0005B9647 /* DIYCameraTests.m */; };
 		07B9B77826C772A0005B9647 /* DIYCameraUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 07B9B77726C772A0005B9647 /* DIYCameraUITests.m */; };
+		07B9B79826C77506005B9647 /* MyCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 07B9B79426C77506005B9647 /* MyCamera.m */; };
+		07B9B79926C77506005B9647 /* DIYCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07B9B79726C77506005B9647 /* DIYCameraViewController.m */; };
+		07B9B79E26C776A2005B9647 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07B9B79C26C776A2005B9647 /* BaseViewController.m */; };
+		07B9B7A526C7771D005B9647 /* WaterMarkView.m in Sources */ = {isa = PBXBuildFile; fileRef = 07B9B7A126C7771D005B9647 /* WaterMarkView.m */; };
+		07B9B7A626C7771D005B9647 /* KMGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 07B9B7A426C7771D005B9647 /* KMGestureRecognizer.m */; };
+		07B9B7A926C777D9005B9647 /* UIView+Ex.m in Sources */ = {isa = PBXBuildFile; fileRef = 07B9B7A726C777D9005B9647 /* UIView+Ex.m */; };
+		07B9B7AC26C77846005B9647 /* NSDate+Ex.m in Sources */ = {isa = PBXBuildFile; fileRef = 07B9B7AB26C77846005B9647 /* NSDate+Ex.m */; };
+		07B9B7B026C77902005B9647 /* FileDirTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 07B9B7AF26C77902005B9647 /* FileDirTools.m */; };
+		07B9B7B326C77965005B9647 /* UIView+SLImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 07B9B7B226C77965005B9647 /* UIView+SLImage.m */; };
+		07B9B7B626C779A7005B9647 /* UIImage+DIYScale.m in Sources */ = {isa = PBXBuildFile; fileRef = 07B9B7B426C779A7005B9647 /* UIImage+DIYScale.m */; };
+		1D9778503CF3556D8D58A6DF /* libPods-DIYCamera.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D137680636E60BAE49B5803C /* libPods-DIYCamera.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +65,30 @@
 		07B9B77326C772A0005B9647 /* DIYCameraUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DIYCameraUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		07B9B77726C772A0005B9647 /* DIYCameraUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DIYCameraUITests.m; sourceTree = "<group>"; };
 		07B9B77926C772A0005B9647 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		07B9B79426C77506005B9647 /* MyCamera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCamera.m; sourceTree = "<group>"; };
+		07B9B79526C77506005B9647 /* MyCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCamera.h; sourceTree = "<group>"; };
+		07B9B79626C77506005B9647 /* DIYCameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DIYCameraViewController.h; sourceTree = "<group>"; };
+		07B9B79726C77506005B9647 /* DIYCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DIYCameraViewController.m; sourceTree = "<group>"; };
+		07B9B79A26C77537005B9647 /* Macro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Macro.h; sourceTree = "<group>"; };
+		07B9B79C26C776A2005B9647 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		07B9B79D26C776A2005B9647 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		07B9B7A126C7771D005B9647 /* WaterMarkView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaterMarkView.m; sourceTree = "<group>"; };
+		07B9B7A226C7771D005B9647 /* KMGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMGestureRecognizer.h; sourceTree = "<group>"; };
+		07B9B7A326C7771D005B9647 /* WaterMarkView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaterMarkView.h; sourceTree = "<group>"; };
+		07B9B7A426C7771D005B9647 /* KMGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMGestureRecognizer.m; sourceTree = "<group>"; };
+		07B9B7A726C777D9005B9647 /* UIView+Ex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Ex.m"; sourceTree = "<group>"; };
+		07B9B7A826C777D9005B9647 /* UIView+Ex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Ex.h"; sourceTree = "<group>"; };
+		07B9B7AA26C77846005B9647 /* NSDate+Ex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Ex.h"; sourceTree = "<group>"; };
+		07B9B7AB26C77846005B9647 /* NSDate+Ex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Ex.m"; sourceTree = "<group>"; };
+		07B9B7AE26C77902005B9647 /* FileDirTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileDirTools.h; sourceTree = "<group>"; };
+		07B9B7AF26C77902005B9647 /* FileDirTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileDirTools.m; sourceTree = "<group>"; };
+		07B9B7B126C77965005B9647 /* UIView+SLImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SLImage.h"; sourceTree = "<group>"; };
+		07B9B7B226C77965005B9647 /* UIView+SLImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SLImage.m"; sourceTree = "<group>"; };
+		07B9B7B426C779A7005B9647 /* UIImage+DIYScale.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+DIYScale.m"; sourceTree = "<group>"; };
+		07B9B7B526C779A7005B9647 /* UIImage+DIYScale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+DIYScale.h"; sourceTree = "<group>"; };
+		91DF8FAFEDBE66C6F602F97E /* Pods-DIYCamera.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DIYCamera.release.xcconfig"; path = "Target Support Files/Pods-DIYCamera/Pods-DIYCamera.release.xcconfig"; sourceTree = "<group>"; };
+		A5C168F9B288DD03F075DADB /* Pods-DIYCamera.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DIYCamera.debug.xcconfig"; path = "Target Support Files/Pods-DIYCamera/Pods-DIYCamera.debug.xcconfig"; sourceTree = "<group>"; };
+		D137680636E60BAE49B5803C /* libPods-DIYCamera.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DIYCamera.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D9778503CF3556D8D58A6DF /* libPods-DIYCamera.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +117,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		02EE39AD142147FD74EC2C97 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D137680636E60BAE49B5803C /* libPods-DIYCamera.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		07B9B74426C7729F005B9647 = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +132,8 @@
 				07B9B76B26C772A0005B9647 /* DIYCameraTests */,
 				07B9B77626C772A0005B9647 /* DIYCameraUITests */,
 				07B9B74E26C7729F005B9647 /* Products */,
+				AA3DBA5A78A514ACCCA72DD1 /* Pods */,
+				02EE39AD142147FD74EC2C97 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,6 +150,12 @@
 		07B9B74F26C7729F005B9647 /* DIYCamera */ = {
 			isa = PBXGroup;
 			children = (
+				07B9B7AD26C77902005B9647 /* Tools */,
+				07B9B79F26C7771D005B9647 /* ThirdPart */,
+				07B9B79B26C776A2005B9647 /* BaseViewController */,
+				07B9B78626C77430005B9647 /* Camera */,
+				07B9B78726C77430005B9647 /* Common */,
+				07B9B78526C77430005B9647 /* Utils */,
 				07B9B75026C7729F005B9647 /* AppDelegate.h */,
 				07B9B75126C7729F005B9647 /* AppDelegate.m */,
 				07B9B75326C7729F005B9647 /* SceneDelegate.h */,
@@ -137,6 +189,94 @@
 			path = DIYCameraUITests;
 			sourceTree = "<group>";
 		};
+		07B9B78526C77430005B9647 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				07B9B7B526C779A7005B9647 /* UIImage+DIYScale.h */,
+				07B9B7B426C779A7005B9647 /* UIImage+DIYScale.m */,
+				07B9B7B126C77965005B9647 /* UIView+SLImage.h */,
+				07B9B7B226C77965005B9647 /* UIView+SLImage.m */,
+				07B9B7AA26C77846005B9647 /* NSDate+Ex.h */,
+				07B9B7AB26C77846005B9647 /* NSDate+Ex.m */,
+				07B9B7A826C777D9005B9647 /* UIView+Ex.h */,
+				07B9B7A726C777D9005B9647 /* UIView+Ex.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		07B9B78626C77430005B9647 /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				07B9B79326C77506005B9647 /* View */,
+				07B9B79626C77506005B9647 /* DIYCameraViewController.h */,
+				07B9B79726C77506005B9647 /* DIYCameraViewController.m */,
+			);
+			path = Camera;
+			sourceTree = "<group>";
+		};
+		07B9B78726C77430005B9647 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				07B9B79A26C77537005B9647 /* Macro.h */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		07B9B79326C77506005B9647 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				07B9B79526C77506005B9647 /* MyCamera.h */,
+				07B9B79426C77506005B9647 /* MyCamera.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		07B9B79B26C776A2005B9647 /* BaseViewController */ = {
+			isa = PBXGroup;
+			children = (
+				07B9B79C26C776A2005B9647 /* BaseViewController.m */,
+				07B9B79D26C776A2005B9647 /* BaseViewController.h */,
+			);
+			path = BaseViewController;
+			sourceTree = "<group>";
+		};
+		07B9B79F26C7771D005B9647 /* ThirdPart */ = {
+			isa = PBXGroup;
+			children = (
+				07B9B7A026C7771D005B9647 /* WaterMark */,
+			);
+			path = ThirdPart;
+			sourceTree = "<group>";
+		};
+		07B9B7A026C7771D005B9647 /* WaterMark */ = {
+			isa = PBXGroup;
+			children = (
+				07B9B7A126C7771D005B9647 /* WaterMarkView.m */,
+				07B9B7A226C7771D005B9647 /* KMGestureRecognizer.h */,
+				07B9B7A326C7771D005B9647 /* WaterMarkView.h */,
+				07B9B7A426C7771D005B9647 /* KMGestureRecognizer.m */,
+			);
+			path = WaterMark;
+			sourceTree = "<group>";
+		};
+		07B9B7AD26C77902005B9647 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				07B9B7AE26C77902005B9647 /* FileDirTools.h */,
+				07B9B7AF26C77902005B9647 /* FileDirTools.m */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		AA3DBA5A78A514ACCCA72DD1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A5C168F9B288DD03F075DADB /* Pods-DIYCamera.debug.xcconfig */,
+				91DF8FAFEDBE66C6F602F97E /* Pods-DIYCamera.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -144,6 +284,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 07B9B77C26C772A0005B9647 /* Build configuration list for PBXNativeTarget "DIYCamera" */;
 			buildPhases = (
+				B9FF4A11CE6064123B8BED7F /* [CP] Check Pods Manifest.lock */,
 				07B9B74926C7729F005B9647 /* Sources */,
 				07B9B74A26C7729F005B9647 /* Frameworks */,
 				07B9B74B26C7729F005B9647 /* Resources */,
@@ -261,15 +402,50 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		B9FF4A11CE6064123B8BED7F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DIYCamera-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		07B9B74926C7729F005B9647 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07B9B7AC26C77846005B9647 /* NSDate+Ex.m in Sources */,
+				07B9B7B026C77902005B9647 /* FileDirTools.m in Sources */,
+				07B9B7B626C779A7005B9647 /* UIImage+DIYScale.m in Sources */,
 				07B9B75826C7729F005B9647 /* ViewController.m in Sources */,
+				07B9B7A626C7771D005B9647 /* KMGestureRecognizer.m in Sources */,
 				07B9B75226C7729F005B9647 /* AppDelegate.m in Sources */,
 				07B9B76326C772A0005B9647 /* main.m in Sources */,
+				07B9B7A526C7771D005B9647 /* WaterMarkView.m in Sources */,
+				07B9B7A926C777D9005B9647 /* UIView+Ex.m in Sources */,
 				07B9B75526C7729F005B9647 /* SceneDelegate.m in Sources */,
+				07B9B7B326C77965005B9647 /* UIView+SLImage.m in Sources */,
+				07B9B79826C77506005B9647 /* MyCamera.m in Sources */,
+				07B9B79E26C776A2005B9647 /* BaseViewController.m in Sources */,
+				07B9B79926C77506005B9647 /* DIYCameraViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,7 +551,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -428,7 +604,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -438,6 +614,7 @@
 		};
 		07B9B77D26C772A0005B9647 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A5C168F9B288DD03F075DADB /* Pods-DIYCamera.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -456,6 +633,7 @@
 		};
 		07B9B77E26C772A0005B9647 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 91DF8FAFEDBE66C6F602F97E /* Pods-DIYCamera.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

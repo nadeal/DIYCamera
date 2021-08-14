@@ -2,10 +2,12 @@
 //  AppDelegate.m
 //  DIYCamera
 //
-//  Created by 彭木贤 on 2021/8/14.
+//  Created by Billy on 2021/8/14.
 //
 
 #import "AppDelegate.h"
+#import "Macro.h"
+#import "FileDirTools.h"
 
 @interface AppDelegate ()
 
@@ -16,9 +18,31 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    self.allowRotation = 0;
+    [self onCreatePhotoDirMethod:@"999"];
     return YES;
 }
 
+-(void) onCreatePhotoDirMethod:(NSString*) uid {
+    NSString *documentStr = [FileDirTools documentsDir];
+    self.photoPath = [NSString stringWithFormat:@"%@/%@%@", documentStr, uid, APP_PHOTOS_DIR];
+    LogOut(@"photo Path %@", self.photoPath);
+    BOOL isSuccess = [FileDirTools createDirectoryAtPath:self.photoPath];
+    if (isSuccess) {
+        LogOut(@"文件夹创建成功");
+    } else {
+        LogOut(@"文件夹创建失败");
+    }
+    
+}
+
+-(UIInterfaceOrientationMask)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window {
+    return self.allowRotation ? UIInterfaceOrientationMaskLandscapeRight : UIInterfaceOrientationMaskPortrait;
+}
+
+-(BOOL)shouldAutorotate{
+    return self.allowRotation ? YES : NO;
+}
 
 #pragma mark - UISceneSession lifecycle
 
